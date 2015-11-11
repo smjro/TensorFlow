@@ -1,1 +1,2 @@
 # TensorFlow
+Googleが人工知能・機械学習ソフトウェアTensorFlowをオープンソース化したので、触ってみたいと思います。
