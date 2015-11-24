@@ -64,3 +64,14 @@ Hello, TensorFlow!
 >>>
 ```
 上記のように動けばインストール成功です。
+
+## MNIST For ML Beginners
+TensorFlowの使い方を覚えるために、チュートリアルをやっていきます。
+
+### The MNIST Data
+以下のコードでMNISTデータをインポートします。
+```
+import input_data
+mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+```
+ただし、データセット`MNIST_data`は同じディレクトリにあるとしています。
