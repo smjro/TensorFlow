@@ -70,10 +70,8 @@ TensorFlowの使い方を覚えるために、チュートリアルをやって�
 
 ### The MNIST Data
 まず手書き数字認識のチュートリアルを始める前に，
-使用するデータセットをインポートする必要があります．
-
-そこで，[ここ](https://github.com/tensorflow/tensorflow/blob/r0.7/tensorflow/examples/tutorials/mnist/input_data.py)のコードを'input_data.py'で同じディレクトリに保存してください．
-
+使用するデータセットをインポートする必要があります．  
+そこで，[ここ](https://github.com/tensorflow/tensorflow/blob/r0.7/tensorflow/examples/tutorials/mnist/input_data.py)のコードを'input_data.py'で同じディレクトリに保存してください．  
 これで，以下のコードでMNISTデータをインポートできるようになります．
 ```
 import input_data
