@@ -78,6 +78,12 @@ import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 ```
 ダウンロードされたデータは'mnist.train'，'mnist.test'，'mnist.validation'
-の３つに分類することができます．
+の３つに分類することができます．  
 これは，訓練データのみではなく学習していないデータも使用することにより
-一般論を述べれるようにするためである．
+一般論を述べれるようにするためです．
+
+すべてのMNISTデータは２つの部分（画像とラベル）からなっており，ここでは
+画像を'xs'，ラベルを'ys'と呼びます．例えば，訓練画像は'mnist.train.images'
+，訓練ラベルは'mnist.train.labels'となっています．
+
+![MNIST Matrix](https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png)
