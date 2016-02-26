@@ -86,5 +86,5 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 画像を'xs'，ラベルを'ys'と呼びます．例えば，訓練画像は'mnist.train.images'
 ，訓練ラベルは'mnist.train.labels'となっています．
 
-各画像は28$\times$28ピクセルで，大きな数字の配列として解釈できます．
+各画像は28$$\times$$28ピクセルで，大きな数字の配列として解釈できます．
 <img src="https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png" width="400px">
