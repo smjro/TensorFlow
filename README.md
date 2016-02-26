@@ -86,4 +86,5 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 画像を'xs'，ラベルを'ys'と呼びます．例えば，訓練画像は'mnist.train.images'
 ，訓練ラベルは'mnist.train.labels'となっています．
 
-![MNIST Matrix](https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png)
+<!-- ![MNIST Matrix](https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png) -->
+<img src="https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png" width="400px">
