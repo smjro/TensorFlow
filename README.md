@@ -18,11 +18,10 @@ $ sudo apt-get install python-pip python-dev
 次に`TensorFlow`をインストールします．
 ```
 # For CPU-only version
-$ ~~pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl~~
-sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp34-none-linux_x86_64.whl
+$ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp27-none-linux_x86_64.whl
 
 # For GPU-enabled version (only install this version if you have the CUDA sdk installed)
-$ pip install https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
+$ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.7.1-cp27-none-linux_x86_64.whl
 ```
 
 ## VirtualEnv
@@ -51,6 +50,17 @@ virtualenv内でTensorFlowをインストールします。
 (tensorflow)$ pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
 ```
 
+もし，ここからcloneしてきたのであればインストール中に
+`誤ったインタプリタです`と怒られると思います．  
+その時は`tensorflow/bin`にある`pip`を次のように書き換えてください．
+```
+#befor
+#!/home/shimadakento/tensorflow/bin/python
+
+#after
+#!/home/[ユーザー名]/[ディレクトリ名]/bin/python
+```
+
 ## TensorFlowを動作させる
 python terminalを開きます。
 ```
@@ -75,25 +85,28 @@ TensorFlowの使い方を覚えるために、チュートリアルをやって�
 ### The MNIST Data
 まず手書き数字認識のチュートリアルを始める前に，
 使用するデータセットをインポートする必要があります．  
-そこで，[ここ](https://github.com/tensorflow/tensorflow/blob/r0.7/tensorflow/examples/tutorials/mnist/input_data.py)のコードを'input_data.py'で同じディレクトリに保存してください．  
+そこで，[ここ](https://github.com/tensorflow/tensorflow/blob/r0.7/tensorflow/examples/tutorials/mnist/input_data.py)のコードを`input_data.py`で同じディレクトリに保存してください．  
 これで，以下のコードでMNISTデータをインポートできるようになります．
 ```
 import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 ```
-ダウンロードされたデータは'mnist.train'，'mnist.test'，'mnist.validation'
+ダウンロードされたデータは`mnist.train`，`mnist.test`，`mnist.validation`
 の３つに分類することができます．  
 これは，訓練データのみではなく学習していないデータも使用することにより
 一般論を述べれるようにするためです．
 
 すべてのMNISTデータは２つの部分（画像とラベル）からなっており，ここでは
-画像を'xs'，ラベルを'ys'と呼びます．例えば，訓練画像は'mnist.train.images'
-，訓練ラベルは'mnist.train.labels'となっています．
+画像を`xs`，ラベルを`ys`と呼びます．例えば，訓練画像は`mnist.train.images`
+，訓練ラベルは`mnist.train.labels`となっています．
 
-各画像は28×28ピクセルで，大きな数字の配列として解釈できます．
+各画像は28×28px(=784)．
 
 <img src="https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png" width="400px">
 
-結果としては'mnist.train.images'は[55000, 784]の形をしたテンソル（ｎ次元配列）です．
-一次元は画像のインデックス，二次元は各画像のピクセルのインデックスです．
-テンソルの各要素は０と１の間のピクセル強度として表されます．
+`mnist.train.images`は[55000, 784]の配列，`mnist.train.labels`は[55000, 10]の配列です．  
+例えば，３というラベルは[0,0,0,1,0,0,0,0,0,0]と表される．
+
+<img src="https://www.tensorflow.org/versions/r0.7/images/mnist-train-ys.png" width="400px">
+
+### Softmax Regressions(ソフトマックス回帰)
