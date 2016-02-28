@@ -110,3 +110,23 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 <img src="https://www.tensorflow.org/versions/r0.7/images/mnist-train-ys.png" width="400px">
 
 ### Softmax Regressions(ソフトマックス回帰)
+ソフトマックス回帰は，次の２ステップで行われます．
+1. 特定のクラスに含まれる入力のevidenceを合計する．
+2. evidenceを確率に変換する．
+
+与えられた画像が特定のクラスに含まれるというevidenceを総計するためにピクセル強度
+の加重和を計算します．高い強度を持つピクセルがそのクラス内の画像に反するevidence
+であるならば，重みは負となります．一方で，合致すようなevidenceであれば正となります．
+
+次の画像はあるモデルがこれらのクラス各々から学んだ重みを示しています．ここで，
+赤は負，青は正の重みを表します．
+
+<img src="https://www.tensorflow.org/versions/r0.7/images/softmax-weights.png" width="400px">
+
+また，バイアスと呼ばれるevidenceも加えます．その結果evidenceは次ように表されます．
+
+```math
+evidence=\sum_{j}w_{i,j}x_j+b_i
+```
+
+<img src="fig/evidencd.png" width="400px">
