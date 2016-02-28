@@ -87,6 +87,7 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 ，訓練ラベルは'mnist.train.labels'となっています．
 
 各画像は28×28ピクセルで，大きな数字の配列として解釈できます．
+
 <img src="https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png" width="400px">
 
 結果としては'mnist.train.images'は[55000, 784]の形をしたテンソル（ｎ次元配列）です．
