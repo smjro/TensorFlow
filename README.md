@@ -129,4 +129,4 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 evidence=\sum_{j}w_{i,j}x_j+b_i
 ```
 
-<img src="fig/evidencd.png" width="400px">
+<img src="/fig/evidencd.png" width="400px">
