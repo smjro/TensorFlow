@@ -125,8 +125,4 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 また，バイアスと呼ばれるevidenceも加えます．その結果evidenceは次ように表されます．
 
-```math
-evidence=\sum_{j}w_{i,j}x_j+b_i
-```
-
-<img src="https://github.com/smjro/TensorFlow/blob/master/fig/evidence.png" width="400px">
+<img src="https://github.com/smjro/TensorFlow/blob/master/fig/evidence.png" width="200px">
