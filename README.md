@@ -8,7 +8,9 @@ ubuntu 14.04LTS 64bit
 OSによって方法が変わります。詳細は[ここ](http://tensorflow.org/get_started/os_setup.md)を参照して下さい。
 ### Ubuntu/Linux
 まず，'pip'をインストールしてください．
+
 > **pip**はPythonで書かれたパッケージソフトウェアをインストール・管理するためのパッケージ管理システムである．
+
 ```
 # Ubuntu/Linux 64-bit
 $ sudo apt-get install python-pip python-dev
