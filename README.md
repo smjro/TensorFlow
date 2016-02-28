@@ -18,7 +18,7 @@ $ sudo apt-get install python-pip python-dev
 次に`TensorFlow`をインストールします．
 ```
 # For CPU-only version
-$ ~pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl~
+$ ~~pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl~~
 sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.7.1-cp34-none-linux_x86_64.whl
 
 # For GPU-enabled version (only install this version if you have the CUDA sdk installed)
