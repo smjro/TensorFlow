@@ -7,7 +7,7 @@ ubuntu 14.04LTS 64bit
 ## downloadとinstall
 OSによって方法が変わります。詳細は[ここ](http://tensorflow.org/get_started/os_setup.md)を参照して下さい。
 ### Ubuntu/Linux
-まず，'pip'をインストールしてください．
+まず，`pip`をインストールしてください．
 
 > **pip**はPythonで書かれたパッケージソフトウェアをインストール・管理するためのパッケージ管理システムである．
 
@@ -15,6 +15,7 @@ OSによって方法が変わります。詳細は[ここ](http://tensorflow.org
 # Ubuntu/Linux 64-bit
 $ sudo apt-get install python-pip python-dev
 ```
+次に`TensorFlow`をインストールします．
 ```
 # For CPU-only version
 $ pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
