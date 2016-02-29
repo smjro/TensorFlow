@@ -133,8 +133,8 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 <img src="https://github.com/smjro/TensorFlow/blob/master/fig/probability.png" width="200px">
 
 ここでソフトマックスは線形関数の出力を望みの形に整形する
-「活性化」あるいは「リンク」関数として振る舞います．
-(今回のケースでは１０個の数字の確率分布)
+「活性化」あるいは「リンク」関数として振る舞います
+(今回のケースでは１０個の数字の確率分布)．
 evidenceの合計を入力が各クラスに含まれる確率に変換するものと考えることができ，
 次の式で定義されます．
 
@@ -143,3 +143,5 @@ evidenceの合計を入力が各クラスに含まれる確率に変換するも
 また，式を拡張すると次式が得られます．
 
 <img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax.png" width="200px">
+
+$2^3$
