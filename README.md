@@ -144,7 +144,24 @@ evidenceの合計を入力が各クラスに含まれる確率に変換するも
 
 <img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax.png" width="200px">
 
-```math
-2^3
-```
+１０個の出力の総和が１となることで確立と解釈することが可能になります．
+exp()関数は，値がマイナスにならないように使用されています．
+これにより，値がマイナスにならず，かつ総和が１となるため確率と解釈ができます．
 
+ソフトマックス回帰は次のように表現できます．
+
+<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-scalargraph.png" width="200px">
+
+方程式として書くならば次のように表現できます．
+
+<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-scalarequation.png" width="200px">
+
+行列とベクトルを用いると
+
+<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-vectorequation.png" width="200px">
+
+となり，まとめると
+
+<img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax_vector.png" width="200px">
+
+と表現できます．
