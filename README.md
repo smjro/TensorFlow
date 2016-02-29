@@ -144,4 +144,4 @@ evidenceの合計を入力が各クラスに含まれる確率に変換するも
 
 <img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax.png" width="200px">
 
-`\\$2^3$`
+`\$2^3$`
