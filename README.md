@@ -110,8 +110,8 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 <img src="https://www.tensorflow.org/versions/r0.7/images/mnist-train-ys.png" width="400px">
 
 ### Softmax Regressions(ソフトマックス回帰)
-ソフトマックス回帰は，次の２ステップで行われます．
-1. 特定のクラスに含まれる入力のevidenceを合計する．
+ソフトマックス回帰は，次の２ステップで行われます．  
+1. 特定のクラスに含まれる入力のevidenceを合計する．  
 2. evidenceを確率に変換する．
 
 与えられた画像が特定のクラスに含まれるというevidenceを総計するためにピクセル強度
@@ -145,8 +145,8 @@ evidenceの合計を入力が各クラスに含まれる確率に変換するも
 <img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax.png" width="200px">
 
 １０個の出力の総和が１となることで確立と解釈することが可能になります．  
-exp()関数は，値がマイナスにならないように使用されています．  
-これにより，値がマイナスにならず，かつ総和が１となるため確率と解釈ができます．
+exp()関数は，値がマイナスにならないように使用され，これにより値がマイナスにならず，
+かつ総和が１となるため確率と解釈ができます．
 
 ソフトマックス回帰は次のように表現できます．
 
