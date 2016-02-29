@@ -126,3 +126,20 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 また，バイアスと呼ばれるevidenceも加えます．その結果evidenceは次ように表されます．
 
 <img src="https://github.com/smjro/TensorFlow/blob/master/fig/evidence.png" width="200px">
+
+ここで，wは重み，biはクラスiのバイアス，jは入力画像x内のピクセルを加算するための
+インデックスです．そして，計算されたevidenceを予測される確率に`softmax関数`によって変換します．
+
+<img src="https://github.com/smjro/TensorFlow/blob/master/fig/probability.png" width="200px">
+
+ここでソフトマックスは線形関数の出力を望みの形に整形する
+「活性化」あるいは「リンク」関数として振る舞います．
+(今回のケースでは１０個の数字の確率分布)
+evidenceの合計を入力が各クラスに含まれる確率に変換するものと考えることができ，
+次の式で定義されます．
+
+<img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax.png" width="200px">
+
+また，式を拡張すると次式が得られます．
+
+<img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax_normalize.png" width="200px">
