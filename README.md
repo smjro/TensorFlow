@@ -154,11 +154,11 @@ exp()関数は，値がマイナスにならないように使用されていま
 
 方程式として書くならば次のように表現できます．
 
-<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-scalarequation.png" width="200px">
+<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-scalarequation.png" width="400px">
 
 行列とベクトルを用いると
 
-<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-vectorequation.png" width="200px">
+<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-vectorequation.png" width="400px">
 
 となり，まとめると
 
