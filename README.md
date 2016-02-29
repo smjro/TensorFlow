@@ -138,8 +138,8 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 evidenceの合計を入力が各クラスに含まれる確率に変換するものと考えることができ，
 次の式で定義されます．
 
-<img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax.png" width="200px">
+<img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax_normalize.png" width="200px">
 
 また，式を拡張すると次式が得られます．
 
-<img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax_normalize.png" width="200px">
+<img src="https://github.com/smjro/TensorFlow/blob/master/fig/softmax.png" width="200px">
