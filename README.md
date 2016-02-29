@@ -150,7 +150,7 @@ exp()関数は，値がマイナスにならないように使用されていま
 
 ソフトマックス回帰は次のように表現できます．
 
-<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-scalargraph.png" width="200px">
+<img src="https://www.tensorflow.org/versions/master/images/softmax-regression-scalargraph.png" width="400px">
 
 方程式として書くならば次のように表現できます．
 
