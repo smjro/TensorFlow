@@ -139,16 +139,13 @@ print sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}
 import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 ```
-ダウンロードされたデータは`mnist.train`，`mnist.test`，`mnist.validation`
-の３つに分類することができます．  
-これは，訓練データのみではなく学習していないデータも使用することにより
-一般論を述べれるようにするためです．
 
 すべてのMNISTデータは２つの部分（画像とラベル）からなっており，ここでは
 画像を`xs`，ラベルを`ys`と呼びます．例えば，訓練画像は`mnist.train.images`
 ，訓練ラベルは`mnist.train.labels`となっています．
 
-各画像は28×28px(=784)．
+このチュートリアルでは簡単のため画像データを28*28*1=784の数値，
+つまり二次元の数字の集まりを横一列に並べたものとしている．
 
 <img src="https://www.tensorflow.org/versions/master/images/MNIST-Matrix.png" width="400px">
 
@@ -165,6 +162,10 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 与えられた画像が特定のクラスに含まれるというevidenceを総計するためにピクセル強度
 の加重和を計算します．高い強度を持つピクセルがそのクラス内の画像に反するevidence
 であるならば，重みは負となります．一方で，合致すようなevidenceであれば正となります．
+
+具体的には重みは[784, 10]のテンソルであり，画像中の１pixelが０~９である可能性を
+表しています．例えば，先の**1**の画像の場合，左上のpixelは[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+となることが多く，これは左上のpixelが０~９のいずれにも影響を及ぼさないことから明らかです．
 
 次の画像はあるモデルがこれらのクラス各々から学んだ重みを示しています．ここで，
 赤は負，青は正の重みを表します．
