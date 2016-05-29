@@ -155,6 +155,8 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 <img src="https://www.tensorflow.org/versions/r0.7/images/mnist-train-ys.png" width="400px">
 
 ### Softmax Regressions(ソフトマックス回帰)
+softmax回帰はいくつかの異なるものの一つであるオブジェクトに確率を割り当てたいときに用いられます．
+
 ソフトマックス回帰は，次の２ステップで行われます．  
 1. 特定のクラスに含まれる入力のevidenceを合計する．  
 2. evidenceを確率に変換する．
