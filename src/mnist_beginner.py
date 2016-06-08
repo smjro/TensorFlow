@@ -36,6 +36,7 @@ for i in range(1000):
   # 使用するデータの選択
   batch_xs, batch_ys = mnist.train.next_batch(100)
   # 勾配を用いた更新
+  # feed_dict: 初期化のようなもの
   sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 # 正答率の計算  
 correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
