@@ -7,6 +7,7 @@
 
 ### 原理
 ![sigmoid](fig/sigmoid.png)
+
 入力１に対して出力０を返す．
 
 ### 条件
