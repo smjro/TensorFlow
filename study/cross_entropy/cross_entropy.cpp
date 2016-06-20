@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
-#define startingWeight 2.0
-#define startingBias 2.0
+#define startingWeight 0.6
+#define startingBias 0.9
 #define eta 0.15
 
 // プロトタイプ宣言
